@@ -19,7 +19,7 @@ public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository orderRepository;
     private final RestTemplate restTemplate;
-    private KafkaTemplate<Integer, String> kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
     @Override
     public OrderDTOResponse create(OrderDTOCreate orderDTOCreate) {
